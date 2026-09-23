@@ -44,6 +44,6 @@ test('test alert', async ({ page }) => {
     await expect(page.getByText('Modern Alert - Some people address me as sweet alert as well', { exact: true })).toBeVisible();
     await expect(page.getByText('Modern Alert - Some people address me as sweet alert as well', { exact: true })).toHaveText('Modern Alert - Some people address me as sweet alert as well');
     // await page.locator("//div[@class='modal-background absolute inset-0 bg-slate-900/60 backdrop-blur-sm']").click();
-    await page.getByRole('button', { name: 'close' }).click();
+    await page.getByRole('button', { name: 'close',exact:true }).click();
     // await page.pause();
 })
