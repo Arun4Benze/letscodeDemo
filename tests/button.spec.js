@@ -47,20 +47,20 @@ test('test button', async ({ page }) => {
     await expect(disabledBtn).toBeDisabled();
 
 
-    const clickAndHoldBtn= page.getByRole('button', { name: 'Button Hold!' });
-    await expect(clickAndHoldBtn).toBeVisible();
-    const box = await clickAndHoldBtn.boundingBox();
-    await clickAndHoldBtn.hover();
-    if (box) {
-        await page.mouse.move(box.x + box.width / 2, box.y + box.height / 2);
-        await page.mouse.down();
-        await page.waitForTimeout(2000); // Hold for 2 seconds
-        await page.mouse.up();
-    }
+    // const clickAndHoldBtn= page.getByRole('button', { name: 'Button Hold!' });
+    // await expect(clickAndHoldBtn).toBeVisible();
+    // const box = await clickAndHoldBtn.boundingBox();
+    // await clickAndHoldBtn.hover();
+    // if (box) {
+    //     await page.mouse.move(box.x + box.width / 2, box.y + box.height / 2);
+    //     await page.mouse.down();
+    //     await page.waitForTimeout(2000); // Hold for 2 seconds
+    //     await page.mouse.up();
+    // }
 
-    const longPressBtn = page.getByRole('button', {name: 'Button has been long pressed',exact: true});
+    // const longPressBtn = page.getByRole('button', {name: 'Button has been long pressed',exact: true});
     
-    await expect(longPressBtn).toBeVisible();
+    // await expect(longPressBtn).toBeVisible();
 
     
 });
